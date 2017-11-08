@@ -1,0 +1,88 @@
+nav {
+    .hamburger-menu {
+        margin: 15px;
+        border: 1px solid #3C3C3B;
+        
+        position: absolute;
+        right: 0px;
+        border-radius: 6px;
+        background: url(hamburger.svg) center no-repeat;
+        width: 55px;
+        height: 48px;
+
+        -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+        -moz-box-shadow:    0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+        box-shadow:         0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+    }
+
+    ul {
+        margin: 0 0 0 50px;
+        padding: 0;
+        li {
+            height: 75px;
+            display: inline-block;
+            a {
+                padding: 22px 21px 21px 21px;
+                display: inline-block;
+                text-decoration: none;
+                color: #3C3C3B;
+                font-size: 20px;
+                line-height: 32px;
+            }
+            a:hover {
+                color: #888888;
+                border-bottom: 5px solid #888888;
+                border-radius: 3px;                      
+            }
+            a.active, a:active {
+                border-bottom: 5px solid #B7556C;
+                color: #B7556C;
+                border-radius: 3px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 801px) {
+    nav {
+        .hamburger-menu {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 800px) {
+    nav {
+        ul {
+
+            border-radius: 3px;
+
+            z-index: 1;
+            position: absolute;
+            margin: 15px;
+            right: 0px;
+            background: #fff;
+
+            -webkit-box-shadow: 0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+            -moz-box-shadow:    0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+            box-shadow:         0px 3px 10px 0px rgba(50, 50, 50, 0.2);
+
+            li {
+                display: block;
+                border-bottom: 1px solid #ddd;
+
+                a {
+                    width: 200px;
+                }
+
+                a.active, a:active, a:hover {
+                    border: none;
+                }
+            }
+
+            li:last-child {
+                border-bottom: none;
+            }
+        }
+    }
+}

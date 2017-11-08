@@ -20,47 +20,12 @@ body {
         
         header {
             height: 75px;
-            margin: 0 20%;
+            margin: 0 0 0 20%;
 
             .flex-row;
     
             img#logo {
                 margin-top: 8px;
-            }
-
-            nav {
-
-                ul {
-
-                    margin: 0 0 0 50px;
-                    padding: 0;
-
-                    li {
-                        height: 75px;
-                        display: inline-block;
-
-                        a {
-                            padding: 22px 21px 21px 21px;
-                            display: inline-block;
-                            text-decoration: none;
-                            color: #3C3C3B;
-                            font-size: 20px;
-                            line-height: 32px;
-                        }
-
-                        a:hover {
-                            color: #888888;
-                            border-bottom: 5px solid #888888;
-                            border-radius: 3px;                      
-                        }
-
-                        a.active, a:active {
-                            border-bottom: 5px solid #B7556C;
-                            color: #B7556C;
-                            border-radius: 3px;
-                        }
-                    }
-                }
             }
         }
     }
@@ -87,6 +52,7 @@ body {
             background-image: url(assets/images/temp_instagram_test_image.jpg);
             background-position: center;
             background-size: cover;
+            background-repeat: no-repeat;
             
             filter: grayscale(100%) brightness(0.8) blur(1.5px);
             background-attachment: fixed;
@@ -100,11 +66,10 @@ body {
         top: 150px;
 
         margin: 0 auto 50px auto;
-        padding: 10px 42px 42px 42px; 
 
         border-top: 5px solid #B7556C;
         background: #fff;
-        width: 600px;
+        width: 700px;
 
         border-radius: 3px;
 
@@ -115,33 +80,105 @@ body {
         h1 {
             font-family: "Open Sans", sans-serif;
             font-weight: bold;
-            margin: 20px 0;
+            margin: 30px 42px 10px 42px; 
+
             color: #3f4652;
             color: #B7556C;
             font-size: 28px;
         }
 
         div {
+            margin: 10px 42px 42px 42px;
             font-family: "Lora", serif;
             font-weight: 400;
-            font-size: 1.15em;
+            font-size: 20px;
             line-height: 1.63043em;
             color: #454646;
         }
     }
 
     section:nth-child(4) {
-        font-family: "Lora", serif;        
         height: 260px;
-
-        text-align: right;
-        padding: 20px 20px 0 0;
-        font-size: 12px;
-        color: #D9D9D9;
-
         background-image: url(assets/images/mountains_footer.gif);
         background-color: #F6F6F6;
         background-position: bottom;
         background-repeat: no-repeat;
+    }
+}
+
+
+@media screen and (max-width: 1200px) {
+    body {   
+        section:first-child {           
+            header {
+                margin: 0 0 0 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 700px) {
+    body {
+
+        section:nth-child(2) {
+            position: relative;
+            background-color: #575756;
+            width: 100%;
+            overflow: hidden;
+            
+            img {
+                min-height: initial;
+                height: 200px;
+                width: 700px;;
+    
+                -moz-transform: scale(1);
+                -o-transform: scale(1);
+                -webkit-transform: scale(1);
+                transform: scale(1);
+
+                background-image: url(assets/images/temp_instagram_test_image.jpg);
+                background-position: initial;
+                background-size: cover;
+                
+                filter: grayscale(100%) brightness(0.8) blur(0px);
+                background-attachment: initial;
+            }
+        }
+
+        article {
+            position: relative;
+            left: 0;
+            right: 0;
+            top: 0;
+            width: 100%;
+            margin-bottom: 0;
+            padding: 0 0 20px 0;
+    
+            h1 {
+                font-size: 20px;
+            }
+    
+            div {
+                font-size: 16px;
+                line-height: 1.63043em;
+            }
+        }
+
+        section:nth-child(4) {
+            height: 100px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    body {
+        section:first-child {
+            header {
+                img#logo {
+                    width: 70%;
+                    min-width: 170px;
+                }
+            }
+        }
     }
 }
